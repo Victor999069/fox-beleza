@@ -95,12 +95,13 @@
             this.Txt_Input_Tel.Name = "Txt_Input_Tel";
             this.Txt_Input_Tel.Size = new System.Drawing.Size(148, 23);
             this.Txt_Input_Tel.TabIndex = 5;
+            this.Txt_Input_Tel.TextChanged += new System.EventHandler(this.Txt_Input_Tel_TextChanged);
             // 
             // Lbl_Input_Preco
             // 
             this.Lbl_Input_Preco.AutoSize = true;
             this.Lbl_Input_Preco.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Preco.Location = new System.Drawing.Point(277, 189);
+            this.Lbl_Input_Preco.Location = new System.Drawing.Point(449, 189);
             this.Lbl_Input_Preco.Name = "Lbl_Input_Preco";
             this.Lbl_Input_Preco.Size = new System.Drawing.Size(50, 29);
             this.Lbl_Input_Preco.TabIndex = 8;
@@ -108,7 +109,7 @@
             // 
             // Txt_Input_Prc
             // 
-            this.Txt_Input_Prc.Location = new System.Drawing.Point(328, 189);
+            this.Txt_Input_Prc.Location = new System.Drawing.Point(500, 189);
             this.Txt_Input_Prc.Name = "Txt_Input_Prc";
             this.Txt_Input_Prc.Size = new System.Drawing.Size(69, 23);
             this.Txt_Input_Prc.TabIndex = 7;
@@ -117,7 +118,7 @@
             // 
             this.Lbl_Input_Desconto.AutoSize = true;
             this.Lbl_Input_Desconto.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Desconto.Location = new System.Drawing.Point(403, 189);
+            this.Lbl_Input_Desconto.Location = new System.Drawing.Point(287, 189);
             this.Lbl_Input_Desconto.Name = "Lbl_Input_Desconto";
             this.Lbl_Input_Desconto.Size = new System.Drawing.Size(74, 29);
             this.Lbl_Input_Desconto.TabIndex = 10;
@@ -126,10 +127,11 @@
             // 
             // Txt_Input_Desconto
             // 
-            this.Txt_Input_Desconto.Location = new System.Drawing.Point(479, 189);
+            this.Txt_Input_Desconto.Location = new System.Drawing.Point(363, 189);
             this.Txt_Input_Desconto.Name = "Txt_Input_Desconto";
             this.Txt_Input_Desconto.Size = new System.Drawing.Size(75, 23);
             this.Txt_Input_Desconto.TabIndex = 9;
+            this.Txt_Input_Desconto.TextChanged += new System.EventHandler(this.Txt_Input_Desconto_TextChanged);
             // 
             // Btn_Prestacao_Retorna
             // 

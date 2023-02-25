@@ -39,5 +39,22 @@ namespace Controle_Regina_Cliente.Input_Dados
         {
 
         }
+
+        private void Txt_Input_Tel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_Input_Desconto_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(Txt_Input_Desconto.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Informe o Desconto Dado");
+                if (Txt_Input_Desconto.Text.Length> 0)
+                {
+                    Txt_Input_Desconto.Text = Txt_Input_Desconto.Text.Remove(Txt_Input_Desconto.Text.Length-1);
+                }
+            }
+        }
     }
 }
