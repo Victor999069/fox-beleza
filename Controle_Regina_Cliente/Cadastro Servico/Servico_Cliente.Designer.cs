@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Lbl_Text_Servico = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_Nome_Servico = new System.Windows.Forms.TextBox();
             this.Lbl_Servico = new System.Windows.Forms.Label();
             this.Lbl_Descricao_Servico = new System.Windows.Forms.Label();
             this.Rtb_Descricao_Servico = new System.Windows.Forms.RichTextBox();
@@ -49,12 +49,12 @@
             this.Lbl_Text_Servico.TabIndex = 2;
             this.Lbl_Text_Servico.Text = "Cadastre os Serviços Prestados";
             // 
-            // textBox1
+            // Txt_Nome_Servico
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 23);
-            this.textBox1.TabIndex = 1;
+            this.Txt_Nome_Servico.Location = new System.Drawing.Point(144, 132);
+            this.Txt_Nome_Servico.Name = "Txt_Nome_Servico";
+            this.Txt_Nome_Servico.Size = new System.Drawing.Size(229, 23);
+            this.Txt_Nome_Servico.TabIndex = 1;
             // 
             // Lbl_Servico
             // 
@@ -112,6 +112,7 @@
             this.Btn_Salvar_Servico.TabIndex = 5;
             this.Btn_Salvar_Servico.Text = "Salvar";
             this.Btn_Salvar_Servico.UseVisualStyleBackColor = true;
+            this.Btn_Salvar_Servico.Click += new System.EventHandler(this.Btn_Salvar_Servico_Click);
             // 
             // Btn_Retornar_Menu
             // 
@@ -136,7 +137,7 @@
             this.Controls.Add(this.Rtb_Descricao_Servico);
             this.Controls.Add(this.Lbl_Descricao_Servico);
             this.Controls.Add(this.Lbl_Servico);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Txt_Nome_Servico);
             this.Controls.Add(this.Lbl_Text_Servico);
             this.Name = "Servico_Cliente";
             this.Text = "Servico_Cliente";
@@ -148,7 +149,7 @@
         #endregion
 
         private Label Lbl_Text_Servico;
-        private TextBox textBox1;
+        private TextBox Txt_Nome_Servico;
         private Label Lbl_Servico;
         private Label Lbl_Descricao_Servico;
         private RichTextBox Rtb_Descricao_Servico;

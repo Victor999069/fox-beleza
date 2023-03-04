@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Txt_Input_Cliente = new System.Windows.Forms.TextBox();
+            this.Txt_Registro_Cliente = new System.Windows.Forms.TextBox();
             this.Lbl_Input_Cliente = new System.Windows.Forms.Label();
             this.Lbl_Input_Servico = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Cb_Registro_Servico = new System.Windows.Forms.ComboBox();
             this.Lbl_Input_Tel = new System.Windows.Forms.Label();
-            this.Txt_Input_Tel = new System.Windows.Forms.TextBox();
+            this.Txt_Registro_Tel = new System.Windows.Forms.TextBox();
             this.Lbl_Input_Preco = new System.Windows.Forms.Label();
-            this.Txt_Input_Prc = new System.Windows.Forms.TextBox();
+            this.Txt_Registro_Prc = new System.Windows.Forms.TextBox();
             this.Lbl_Input_Desconto = new System.Windows.Forms.Label();
-            this.Txt_Input_Desconto = new System.Windows.Forms.TextBox();
+            this.Txt_Registro_Desconto = new System.Windows.Forms.TextBox();
             this.Btn_Prestacao_Retorna = new System.Windows.Forms.Button();
             this.Lbl_Prestacao_Inicial = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Txt_Input_Cliente
+            // Txt_Registro_Cliente
             // 
-            this.Txt_Input_Cliente.Location = new System.Drawing.Point(123, 126);
-            this.Txt_Input_Cliente.Name = "Txt_Input_Cliente";
-            this.Txt_Input_Cliente.Size = new System.Drawing.Size(148, 23);
-            this.Txt_Input_Cliente.TabIndex = 0;
+            this.Txt_Registro_Cliente.Location = new System.Drawing.Point(123, 126);
+            this.Txt_Registro_Cliente.Name = "Txt_Registro_Cliente";
+            this.Txt_Registro_Cliente.Size = new System.Drawing.Size(148, 23);
+            this.Txt_Registro_Cliente.TabIndex = 0;
             // 
             // Lbl_Input_Cliente
             // 
@@ -70,14 +70,14 @@
             this.Lbl_Input_Servico.TabIndex = 3;
             this.Lbl_Input_Servico.Text = "Serviço Prestado";
             // 
-            // comboBox1
+            // Cb_Registro_Servico
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(400, 126);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 23);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Cb_Registro_Servico.FormattingEnabled = true;
+            this.Cb_Registro_Servico.Location = new System.Drawing.Point(400, 126);
+            this.Cb_Registro_Servico.Name = "Cb_Registro_Servico";
+            this.Cb_Registro_Servico.Size = new System.Drawing.Size(188, 23);
+            this.Cb_Registro_Servico.TabIndex = 4;
+            this.Cb_Registro_Servico.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Lbl_Input_Tel
             // 
@@ -89,13 +89,13 @@
             this.Lbl_Input_Tel.TabIndex = 6;
             this.Lbl_Input_Tel.Text = "Telefone Cliente";
             // 
-            // Txt_Input_Tel
+            // Txt_Registro_Tel
             // 
-            this.Txt_Input_Tel.Location = new System.Drawing.Point(123, 189);
-            this.Txt_Input_Tel.Name = "Txt_Input_Tel";
-            this.Txt_Input_Tel.Size = new System.Drawing.Size(148, 23);
-            this.Txt_Input_Tel.TabIndex = 5;
-            this.Txt_Input_Tel.TextChanged += new System.EventHandler(this.Txt_Input_Tel_TextChanged);
+            this.Txt_Registro_Tel.Location = new System.Drawing.Point(123, 189);
+            this.Txt_Registro_Tel.Name = "Txt_Registro_Tel";
+            this.Txt_Registro_Tel.Size = new System.Drawing.Size(148, 23);
+            this.Txt_Registro_Tel.TabIndex = 5;
+            this.Txt_Registro_Tel.TextChanged += new System.EventHandler(this.Txt_Input_Tel_TextChanged);
             // 
             // Lbl_Input_Preco
             // 
@@ -107,12 +107,12 @@
             this.Lbl_Input_Preco.TabIndex = 8;
             this.Lbl_Input_Preco.Text = "Preço";
             // 
-            // Txt_Input_Prc
+            // Txt_Registro_Prc
             // 
-            this.Txt_Input_Prc.Location = new System.Drawing.Point(500, 189);
-            this.Txt_Input_Prc.Name = "Txt_Input_Prc";
-            this.Txt_Input_Prc.Size = new System.Drawing.Size(69, 23);
-            this.Txt_Input_Prc.TabIndex = 7;
+            this.Txt_Registro_Prc.Location = new System.Drawing.Point(500, 189);
+            this.Txt_Registro_Prc.Name = "Txt_Registro_Prc";
+            this.Txt_Registro_Prc.Size = new System.Drawing.Size(69, 23);
+            this.Txt_Registro_Prc.TabIndex = 7;
             // 
             // Lbl_Input_Desconto
             // 
@@ -125,13 +125,13 @@
             this.Lbl_Input_Desconto.Text = "Desconto";
             this.Lbl_Input_Desconto.Click += new System.EventHandler(this.Lbl_Input_Desconto_Click);
             // 
-            // Txt_Input_Desconto
+            // Txt_Registro_Desconto
             // 
-            this.Txt_Input_Desconto.Location = new System.Drawing.Point(363, 189);
-            this.Txt_Input_Desconto.Name = "Txt_Input_Desconto";
-            this.Txt_Input_Desconto.Size = new System.Drawing.Size(75, 23);
-            this.Txt_Input_Desconto.TabIndex = 9;
-            this.Txt_Input_Desconto.TextChanged += new System.EventHandler(this.Txt_Input_Desconto_TextChanged);
+            this.Txt_Registro_Desconto.Location = new System.Drawing.Point(363, 189);
+            this.Txt_Registro_Desconto.Name = "Txt_Registro_Desconto";
+            this.Txt_Registro_Desconto.Size = new System.Drawing.Size(75, 23);
+            this.Txt_Registro_Desconto.TabIndex = 9;
+            this.Txt_Registro_Desconto.TextChanged += new System.EventHandler(this.Txt_Input_Desconto_TextChanged);
             // 
             // Btn_Prestacao_Retorna
             // 
@@ -162,15 +162,15 @@
             this.Controls.Add(this.Lbl_Prestacao_Inicial);
             this.Controls.Add(this.Btn_Prestacao_Retorna);
             this.Controls.Add(this.Lbl_Input_Desconto);
-            this.Controls.Add(this.Txt_Input_Desconto);
+            this.Controls.Add(this.Txt_Registro_Desconto);
             this.Controls.Add(this.Lbl_Input_Preco);
-            this.Controls.Add(this.Txt_Input_Prc);
+            this.Controls.Add(this.Txt_Registro_Prc);
             this.Controls.Add(this.Lbl_Input_Tel);
-            this.Controls.Add(this.Txt_Input_Tel);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Txt_Registro_Tel);
+            this.Controls.Add(this.Cb_Registro_Servico);
             this.Controls.Add(this.Lbl_Input_Servico);
             this.Controls.Add(this.Lbl_Input_Cliente);
-            this.Controls.Add(this.Txt_Input_Cliente);
+            this.Controls.Add(this.Txt_Registro_Cliente);
             this.Name = "Registro_Prestacao";
             this.Text = "Input_Dados";
             this.ResumeLayout(false);
@@ -180,16 +180,16 @@
 
         #endregion
 
-        private TextBox Txt_Input_Cliente;
+        private TextBox Txt_Registro_Cliente;
         private Label Lbl_Input_Cliente;
         private Label Lbl_Input_Servico;
-        private ComboBox comboBox1;
+        private ComboBox Cb_Registro_Servico;
         private Label Lbl_Input_Tel;
-        private TextBox Txt_Input_Tel;
+        private TextBox Txt_Registro_Tel;
         private Label Lbl_Input_Preco;
-        private TextBox Txt_Input_Prc;
+        private TextBox Txt_Registro_Prc;
         private Label Lbl_Input_Desconto;
-        private TextBox Txt_Input_Desconto;
+        private TextBox Txt_Registro_Desconto;
         private Button Btn_Prestacao_Retorna;
         private Label Lbl_Prestacao_Inicial;
     }

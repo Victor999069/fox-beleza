@@ -99,6 +99,7 @@
             this.Btn_Salvar_Cliente.TabIndex = 7;
             this.Btn_Salvar_Cliente.Text = "Salvar";
             this.Btn_Salvar_Cliente.UseVisualStyleBackColor = true;
+            this.Btn_Salvar_Cliente.Click += new System.EventHandler(this.Btn_Salvar_Cliente_Click);
             // 
             // Lbl_Cliente_Bairro
             // 

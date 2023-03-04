@@ -61,5 +61,26 @@ namespace Controle_Regina_Cliente.Menu
             viajar.Show();
             this.Hide();
         }
+
+        private void Stm_CadastroCliente_Menu_Click(object sender, EventArgs e)
+        {
+            Cadastro_Cliente viajar = new Cadastro_Cliente();
+            viajar.Show();
+            this.Hide();
+        }
+
+        private void Stm_CadastroServico_Menu_Click(object sender, EventArgs e)
+        {
+            Servico_Cliente viajar = new Servico_Cliente();
+            viajar.Show();
+            this.Hide();
+        }
+
+        private void registroClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro_Prestacao viajar = new Registro_Prestacao();
+            viajar.Show();
+            this.Hide();
+        }
     }
 }

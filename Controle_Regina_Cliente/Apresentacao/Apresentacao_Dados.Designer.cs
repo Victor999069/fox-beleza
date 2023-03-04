@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Dgv_Apresentacao_Dados = new System.Windows.Forms.DataGridView();
             this.Id_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bairro_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,25 +36,25 @@
             this.Nome_Servico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prc_Servico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Btn_Apresentacao_Retorna = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Apresentacao_Dados)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // Dgv_Apresentacao_Dados
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Dgv_Apresentacao_Dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_Apresentacao_Dados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Cliente,
             this.Nome_Cliente,
             this.Bairro_Cliente,
             this.Tel_Cliente,
             this.Nome_Servico,
             this.Prc_Servico});
-            this.dataGridView1.Location = new System.Drawing.Point(34, 102);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(700, 150);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.Dgv_Apresentacao_Dados.Location = new System.Drawing.Point(34, 102);
+            this.Dgv_Apresentacao_Dados.Name = "Dgv_Apresentacao_Dados";
+            this.Dgv_Apresentacao_Dados.RowTemplate.Height = 25;
+            this.Dgv_Apresentacao_Dados.Size = new System.Drawing.Size(700, 150);
+            this.Dgv_Apresentacao_Dados.TabIndex = 0;
+            this.Dgv_Apresentacao_Dados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Id_Cliente
             // 
@@ -103,18 +103,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 377);
             this.Controls.Add(this.Btn_Apresentacao_Retorna);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Dgv_Apresentacao_Dados);
             this.Name = "Apresentacao_Dados";
             this.Text = "Apresentacao_Dados";
             this.Load += new System.EventHandler(this.Apresentacao_Dados_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Apresentacao_Dados)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView Dgv_Apresentacao_Dados;
         private DataGridViewTextBoxColumn Id_Cliente;
         private DataGridViewTextBoxColumn Nome_Cliente;
         private DataGridViewTextBoxColumn Bairro_Cliente;
