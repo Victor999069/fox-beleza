@@ -30,14 +30,14 @@
         {
             this.Lbl_Text_Menu = new System.Windows.Forms.Label();
             this.Btn_Menu_Sair = new System.Windows.Forms.Button();
-            this.Btn_Apresentacao = new System.Windows.Forms.Button();
-            this.Btn_Menu_Input = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Stm_Cadastros_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.Stm_CadastroCliente_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.Stm_CadastroServico_Menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Stm_Registros_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.Stm_Registro_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.Stm_Relatorios_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.Stm_Atendimento_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,84 +62,76 @@
             this.Btn_Menu_Sair.UseVisualStyleBackColor = true;
             this.Btn_Menu_Sair.Click += new System.EventHandler(this.Btn_Menu_Sair_Click);
             // 
-            // Btn_Apresentacao
-            // 
-            this.Btn_Apresentacao.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.Btn_Apresentacao.Location = new System.Drawing.Point(523, 165);
-            this.Btn_Apresentacao.Name = "Btn_Apresentacao";
-            this.Btn_Apresentacao.Size = new System.Drawing.Size(97, 75);
-            this.Btn_Apresentacao.TabIndex = 4;
-            this.Btn_Apresentacao.Text = "Analisar Dados";
-            this.Btn_Apresentacao.UseVisualStyleBackColor = true;
-            this.Btn_Apresentacao.Click += new System.EventHandler(this.Btn_Apresentacao_Click);
-            // 
-            // Btn_Menu_Input
-            // 
-            this.Btn_Menu_Input.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.Btn_Menu_Input.Location = new System.Drawing.Point(408, 165);
-            this.Btn_Menu_Input.Name = "Btn_Menu_Input";
-            this.Btn_Menu_Input.Size = new System.Drawing.Size(97, 75);
-            this.Btn_Menu_Input.TabIndex = 5;
-            this.Btn_Menu_Input.Text = "Registre Seu Atendimento";
-            this.Btn_Menu_Input.UseVisualStyleBackColor = true;
-            this.Btn_Menu_Input.Click += new System.EventHandler(this.Btn_Menu_Input_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem,
-            this.registrosToolStripMenuItem});
+            this.Stm_Cadastros_Menu,
+            this.Stm_Registros_Menu,
+            this.Stm_Relatorios_Menu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // cadastroToolStripMenuItem
+            // Stm_Cadastros_Menu
             // 
-            this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Stm_Cadastros_Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Stm_CadastroCliente_Menu,
             this.Stm_CadastroServico_Menu});
-            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.cadastroToolStripMenuItem.Text = "Cadastro";
+            this.Stm_Cadastros_Menu.Name = "Stm_Cadastros_Menu";
+            this.Stm_Cadastros_Menu.Size = new System.Drawing.Size(66, 20);
+            this.Stm_Cadastros_Menu.Text = "Cadastro";
             // 
             // Stm_CadastroCliente_Menu
             // 
             this.Stm_CadastroCliente_Menu.Name = "Stm_CadastroCliente_Menu";
-            this.Stm_CadastroCliente_Menu.Size = new System.Drawing.Size(162, 22);
+            this.Stm_CadastroCliente_Menu.Size = new System.Drawing.Size(180, 22);
             this.Stm_CadastroCliente_Menu.Text = "Cadastro Cliente";
             this.Stm_CadastroCliente_Menu.Click += new System.EventHandler(this.Stm_CadastroCliente_Menu_Click);
             // 
             // Stm_CadastroServico_Menu
             // 
             this.Stm_CadastroServico_Menu.Name = "Stm_CadastroServico_Menu";
-            this.Stm_CadastroServico_Menu.Size = new System.Drawing.Size(162, 22);
+            this.Stm_CadastroServico_Menu.Size = new System.Drawing.Size(180, 22);
             this.Stm_CadastroServico_Menu.Text = "Cadastro Serviço";
             this.Stm_CadastroServico_Menu.Click += new System.EventHandler(this.Stm_CadastroServico_Menu_Click);
             // 
-            // registrosToolStripMenuItem
+            // Stm_Registros_Menu
             // 
-            this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroClienteToolStripMenuItem});
-            this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
-            this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.registrosToolStripMenuItem.Text = "Registros";
+            this.Stm_Registros_Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Stm_Registro_Menu});
+            this.Stm_Registros_Menu.Name = "Stm_Registros_Menu";
+            this.Stm_Registros_Menu.Size = new System.Drawing.Size(67, 20);
+            this.Stm_Registros_Menu.Text = "Registros";
             // 
-            // registroClienteToolStripMenuItem
+            // Stm_Registro_Menu
             // 
-            this.registroClienteToolStripMenuItem.Name = "registroClienteToolStripMenuItem";
-            this.registroClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.registroClienteToolStripMenuItem.Text = "Registro Cliente";
-            this.registroClienteToolStripMenuItem.Click += new System.EventHandler(this.registroClienteToolStripMenuItem_Click);
+            this.Stm_Registro_Menu.Name = "Stm_Registro_Menu";
+            this.Stm_Registro_Menu.Size = new System.Drawing.Size(180, 22);
+            this.Stm_Registro_Menu.Text = "Registro Cliente";
+            this.Stm_Registro_Menu.Click += new System.EventHandler(this.registroClienteToolStripMenuItem_Click);
+            // 
+            // Stm_Relatorios_Menu
+            // 
+            this.Stm_Relatorios_Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Stm_Atendimento_Menu});
+            this.Stm_Relatorios_Menu.Name = "Stm_Relatorios_Menu";
+            this.Stm_Relatorios_Menu.Size = new System.Drawing.Size(71, 20);
+            this.Stm_Relatorios_Menu.Text = "Relatorios";
+            // 
+            // Stm_Atendimento_Menu
+            // 
+            this.Stm_Atendimento_Menu.Name = "Stm_Atendimento_Menu";
+            this.Stm_Atendimento_Menu.Size = new System.Drawing.Size(185, 22);
+            this.Stm_Atendimento_Menu.Text = "Dados Atendimentos";
+            this.Stm_Atendimento_Menu.Click += new System.EventHandler(this.dadosAtendimentosToolStripMenuItem_Click);
             // 
             // Menu_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 366);
-            this.Controls.Add(this.Btn_Menu_Input);
-            this.Controls.Add(this.Btn_Apresentacao);
             this.Controls.Add(this.Btn_Menu_Sair);
             this.Controls.Add(this.Lbl_Text_Menu);
             this.Controls.Add(this.menuStrip1);
@@ -158,13 +150,13 @@
 
         private Label Lbl_Text_Menu;
         private Button Btn_Menu_Sair;
-        private Button Btn_Apresentacao;
-        private Button Btn_Menu_Input;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem cadastroToolStripMenuItem;
+        private ToolStripMenuItem Stm_Cadastros_Menu;
         private ToolStripMenuItem Stm_CadastroCliente_Menu;
         private ToolStripMenuItem Stm_CadastroServico_Menu;
-        private ToolStripMenuItem registrosToolStripMenuItem;
-        private ToolStripMenuItem registroClienteToolStripMenuItem;
+        private ToolStripMenuItem Stm_Registros_Menu;
+        private ToolStripMenuItem Stm_Registro_Menu;
+        private ToolStripMenuItem Stm_Relatorios_Menu;
+        private ToolStripMenuItem Stm_Atendimento_Menu;
     }
 }

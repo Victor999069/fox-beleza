@@ -21,45 +21,14 @@ namespace Controle_Regina_Cliente.Menu
         {
             InitializeComponent();
         }
-
-        private void Btn_Registra_Cliente_Click(object sender, EventArgs e)
-        {
-            Cadastro_Cliente viajar = new Cadastro_Cliente();
-            viajar.Show();
-            this.Hide();
-        }
-
-        
-
-        private void Btn_Cadastrar_Serviço_Click(object sender, EventArgs e)
-        {
-            Servico_Cliente viajar = new Servico_Cliente();
-            viajar.Show();
-            this.Hide();
-        }
-
         private void Btn_Menu_Sair_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Btn_Apresentacao_Click(object sender, EventArgs e)
-        {
-            Apresentacao_Dados viajar = new Apresentacao_Dados();
-            viajar.Show();
-            this.Hide();
-        }
-
         private void Menu_Cliente_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void Btn_Menu_Input_Click(object sender, EventArgs e)
-        {
-            Registro_Prestacao viajar = new Registro_Prestacao();
-            viajar.Show();
-            this.Hide();
         }
 
         private void Stm_CadastroCliente_Menu_Click(object sender, EventArgs e)
@@ -79,6 +48,13 @@ namespace Controle_Regina_Cliente.Menu
         private void registroClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Registro_Prestacao viajar = new Registro_Prestacao();
+            viajar.Show();
+            this.Hide();
+        }
+
+        private void dadosAtendimentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Apresentacao_Dados viajar = new Apresentacao_Dados();
             viajar.Show();
             this.Hide();
         }
