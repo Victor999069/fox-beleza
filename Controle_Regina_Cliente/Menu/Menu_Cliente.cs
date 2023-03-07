@@ -15,17 +15,12 @@ using System.Windows.Forms;
 
 namespace Controle_Regina_Cliente.Menu
 {
-    public partial class Menu_Cliente : Form
+    public partial class Menu : Form
     {
-        public Menu_Cliente()
+        public Menu()
         {
             InitializeComponent();
         }
-        private void Btn_Menu_Sair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void Menu_Cliente_Load(object sender, EventArgs e)
         {
 
@@ -57,6 +52,11 @@ namespace Controle_Regina_Cliente.Menu
             Apresentacao_Dados viajar = new Apresentacao_Dados();
             viajar.Show();
             this.Hide();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

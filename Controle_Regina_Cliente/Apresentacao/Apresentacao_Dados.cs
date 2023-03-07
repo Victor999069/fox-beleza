@@ -25,7 +25,7 @@ namespace Controle_Regina_Cliente.Apresentacao
 
         private void Btn_Apresentacao_Retorna_Click(object sender, EventArgs e)
         {
-            Menu_Cliente viajar = new Menu_Cliente();
+            Menu.Menu viajar = new Menu.Menu();
             viajar.Show();
             this.Close();
         }

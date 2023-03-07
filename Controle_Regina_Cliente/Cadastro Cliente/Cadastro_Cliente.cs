@@ -27,7 +27,7 @@ namespace Controle_Regina_Cliente.Cliente
 
         private void Btn_Retornar_Menu_Click(object sender, EventArgs e)
         {
-            Menu_Cliente viajar = new Menu_Cliente();
+            Menu.Menu viajar = new Menu.Menu();
             viajar.Show();
             this.Hide();
         }
@@ -85,7 +85,7 @@ namespace Controle_Regina_Cliente.Cliente
 
                 this.Hide();
 
-                Menu_Cliente viaja= new Menu_Cliente();
+                Menu.Menu viaja= new Menu.Menu();
                 viaja.Show();
             }
             catch (Exception ex)

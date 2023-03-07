@@ -6,7 +6,6 @@ C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\
 C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\obj\Debug\net7.0-windows\Controle_Regina_Cliente.csproj.AssemblyReference.cache
 C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\obj\Debug\net7.0-windows\Controle_Regina_Cliente.Cliente.Cadastro_Cliente.resources
 C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\obj\Debug\net7.0-windows\Controle_Regina_Cliente.Servico.Servico_Cliente.resources
-C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\obj\Debug\net7.0-windows\Controle_Regina_Cliente.Menu.Menu_Cliente.resources
 C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\obj\Debug\net7.0-windows\Controle_Regina_Cliente.csproj.GenerateResource.cache
 C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\obj\Debug\net7.0-windows\Controle_Regina_Cliente.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\obj\Debug\net7.0-windows\Controle_Regina_Cliente.AssemblyInfoInputs.cache
@@ -26,3 +25,4 @@ C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\
 C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\obj\Debug\net7.0-windows\Controle_Regina_Cliente.csproj.CopyComplete
+C:\Users\regin\OneDrive\Desktop\Controle_Regina_Cliente\Controle_Regina_Cliente\obj\Debug\net7.0-windows\Controle_Regina_Cliente.Menu.Menu.resources
