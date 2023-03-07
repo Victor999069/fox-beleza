@@ -47,7 +47,6 @@
             this.conexaoClienteBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.conexaoClienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.conexaoClienteBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastroClienteBindingSource)).BeginInit();
@@ -198,22 +197,11 @@
             // 
             this.conexaoClienteBindingSource3.DataSource = typeof(Controle_Regina_Cliente.Conexao_BD.Conexao_Cliente);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(313, 78);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(196, 94);
-            this.listBox1.TabIndex = 17;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // Registro_Prestacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 306);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.Cbm_Lista_Cliente);
             this.Controls.Add(this.Lista_de_Serviço);
             this.Controls.Add(this.Txt_Telefone);

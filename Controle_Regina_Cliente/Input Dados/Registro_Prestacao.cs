@@ -92,23 +92,5 @@ namespace Controle_Regina_Cliente.Input_Dados
                 MessageBox.Show($"Ocorreu um erro ao tentar carregar os dados na combo box: {ex.Message}");
             }
         }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Conexao_Cliente conexao = new Conexao_Cliente();
-            SqlConnection connection = conexao.CriarConexao();
-
-            string sql = "SELECT [Nome Cliente] FROM Dados_Clientes";
-            using (SqlCommand command = new SqlCommand(sql, connection))
-            {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        listBox1.Items.Add(reader["Nome Cliente"].ToString());
-                    }
-                }
-            }
-        }
     }
 }
