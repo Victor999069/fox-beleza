@@ -36,7 +36,6 @@
             this.Txt_Registro_Prc = new System.Windows.Forms.TextBox();
             this.Lbl_Input_Desconto = new System.Windows.Forms.Label();
             this.Txt_Registro_Desconto = new System.Windows.Forms.TextBox();
-            this.Btn_Prestacao_Retorna = new System.Windows.Forms.Button();
             this.Lbl_Prestacao_Inicial = new System.Windows.Forms.Label();
             this.Txt_Telefone = new System.Windows.Forms.TextBox();
             this.Lista_de_Serviço = new System.Windows.Forms.ListBox();
@@ -47,12 +46,17 @@
             this.conexaoClienteBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.conexaoClienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.conexaoClienteBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.modosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastroClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource3)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_Input_Cliente
@@ -123,17 +127,6 @@
             this.Txt_Registro_Desconto.TabIndex = 9;
             this.Txt_Registro_Desconto.TextChanged += new System.EventHandler(this.Txt_Input_Desconto_TextChanged);
             // 
-            // Btn_Prestacao_Retorna
-            // 
-            this.Btn_Prestacao_Retorna.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Btn_Prestacao_Retorna.Location = new System.Drawing.Point(12, 252);
-            this.Btn_Prestacao_Retorna.Name = "Btn_Prestacao_Retorna";
-            this.Btn_Prestacao_Retorna.Size = new System.Drawing.Size(86, 33);
-            this.Btn_Prestacao_Retorna.TabIndex = 11;
-            this.Btn_Prestacao_Retorna.Text = "Retorna";
-            this.Btn_Prestacao_Retorna.UseVisualStyleBackColor = true;
-            this.Btn_Prestacao_Retorna.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Lbl_Prestacao_Inicial
             // 
             this.Lbl_Prestacao_Inicial.AutoSize = true;
@@ -197,6 +190,38 @@
             // 
             this.conexaoClienteBindingSource3.DataSource = typeof(Controle_Regina_Cliente.Conexao_BD.Conexao_Cliente);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // modosToolStripMenuItem
+            // 
+            this.modosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salvarToolStripMenuItem,
+            this.retornarToolStripMenuItem});
+            this.modosToolStripMenuItem.Name = "modosToolStripMenuItem";
+            this.modosToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.modosToolStripMenuItem.Text = "Modos";
+            // 
+            // salvarToolStripMenuItem
+            // 
+            this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvarToolStripMenuItem.Text = "Salvar";
+            // 
+            // retornarToolStripMenuItem
+            // 
+            this.retornarToolStripMenuItem.Name = "retornarToolStripMenuItem";
+            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retornarToolStripMenuItem.Text = "Retornar";
+            this.retornarToolStripMenuItem.Click += new System.EventHandler(this.retornarToolStripMenuItem_Click);
+            // 
             // Registro_Prestacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -206,7 +231,6 @@
             this.Controls.Add(this.Lista_de_Serviço);
             this.Controls.Add(this.Txt_Telefone);
             this.Controls.Add(this.Lbl_Prestacao_Inicial);
-            this.Controls.Add(this.Btn_Prestacao_Retorna);
             this.Controls.Add(this.Lbl_Input_Desconto);
             this.Controls.Add(this.Txt_Registro_Desconto);
             this.Controls.Add(this.Lbl_Input_Preco);
@@ -214,6 +238,8 @@
             this.Controls.Add(this.Lbl_Input_Tel);
             this.Controls.Add(this.Lbl_Input_Servico);
             this.Controls.Add(this.Lbl_Input_Cliente);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Registro_Prestacao";
             this.Text = "Input_Dados";
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource1)).EndInit();
@@ -222,6 +248,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource3)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,7 +263,6 @@
         private TextBox Txt_Registro_Prc;
         private Label Lbl_Input_Desconto;
         private TextBox Txt_Registro_Desconto;
-        private Button Btn_Prestacao_Retorna;
         private Label Lbl_Prestacao_Inicial;
         private TextBox Txt_Telefone;
         private ListBox Lista_de_Serviço;
@@ -247,5 +274,9 @@
         private BindingSource conexaoClienteBindingSource3;
         private BindingSource cadastroClienteBindingSource;
         private ListBox listBox1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem modosToolStripMenuItem;
+        private ToolStripMenuItem salvarToolStripMenuItem;
+        private ToolStripMenuItem retornarToolStripMenuItem;
     }
 }

@@ -30,14 +30,19 @@ namespace Controle_Regina_Cliente.Servico
 
         }
 
-        private void Btn_Retornar_Menu_Click(object sender, EventArgs e)
+        private void retornaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Menu.Menu viajar = new Menu.Menu();
             viajar.Show();
             this.Hide();
         }
 
-        private void Btn_Salvar_Servico_Click(object sender, EventArgs e)
+        private void modosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string servico = Txt_Nome_Servico.Text;
             string prcServico = Txt_Preco_Servico.Text;
@@ -47,7 +52,7 @@ namespace Controle_Regina_Cliente.Servico
 
             var cone = connection.CriarConexao();
 
-            string comando = "INSERT INTO Dados_Servico([Nome Servico], [Preco Servico], [Descricao Servico]) VALUES ('" + servico + "', '" + prcServico+ "', '" + descServico + "')";
+            string comando = "INSERT INTO Dados_Servico([Nome Servico], [Preco Servico], [Descricao Servico]) VALUES ('" + servico + "', '" + prcServico + "', '" + descServico + "')";
 
 
             try
@@ -68,5 +73,6 @@ namespace Controle_Regina_Cliente.Servico
                 MessageBox.Show("Depuração não acionada" + ex);
             }
         }
+    }
     }
 }

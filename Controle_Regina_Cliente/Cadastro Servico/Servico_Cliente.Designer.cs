@@ -35,8 +35,11 @@
             this.Rtb_Descricao_Servico = new System.Windows.Forms.RichTextBox();
             this.Lbl_Preco_Servico = new System.Windows.Forms.Label();
             this.Txt_Preco_Servico = new System.Windows.Forms.TextBox();
-            this.Btn_Salvar_Servico = new System.Windows.Forms.Button();
-            this.Btn_Retornar_Menu = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.modosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.retornaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_Text_Servico
@@ -103,35 +106,45 @@
             this.Txt_Preco_Servico.Size = new System.Drawing.Size(91, 23);
             this.Txt_Preco_Servico.TabIndex = 2;
             // 
-            // Btn_Salvar_Servico
+            // menuStrip1
             // 
-            this.Btn_Salvar_Servico.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Btn_Salvar_Servico.Location = new System.Drawing.Point(518, 327);
-            this.Btn_Salvar_Servico.Name = "Btn_Salvar_Servico";
-            this.Btn_Salvar_Servico.Size = new System.Drawing.Size(75, 37);
-            this.Btn_Salvar_Servico.TabIndex = 5;
-            this.Btn_Salvar_Servico.Text = "Salvar";
-            this.Btn_Salvar_Servico.UseVisualStyleBackColor = true;
-            this.Btn_Salvar_Servico.Click += new System.EventHandler(this.Btn_Salvar_Servico_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(622, 24);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // Btn_Retornar_Menu
+            // modosToolStripMenuItem
             // 
-            this.Btn_Retornar_Menu.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Btn_Retornar_Menu.Location = new System.Drawing.Point(25, 327);
-            this.Btn_Retornar_Menu.Name = "Btn_Retornar_Menu";
-            this.Btn_Retornar_Menu.Size = new System.Drawing.Size(81, 37);
-            this.Btn_Retornar_Menu.TabIndex = 4;
-            this.Btn_Retornar_Menu.Text = "Retorna";
-            this.Btn_Retornar_Menu.UseVisualStyleBackColor = true;
-            this.Btn_Retornar_Menu.Click += new System.EventHandler(this.Btn_Retornar_Menu_Click);
+            this.modosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salvarToolStripMenuItem,
+            this.retornaToolStripMenuItem});
+            this.modosToolStripMenuItem.Name = "modosToolStripMenuItem";
+            this.modosToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.modosToolStripMenuItem.Text = "Modos";
+            this.modosToolStripMenuItem.Click += new System.EventHandler(this.modosToolStripMenuItem_Click);
+            // 
+            // salvarToolStripMenuItem
+            // 
+            this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvarToolStripMenuItem.Text = "Salvar";
+            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
+            // 
+            // retornaToolStripMenuItem
+            // 
+            this.retornaToolStripMenuItem.Name = "retornaToolStripMenuItem";
+            this.retornaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retornaToolStripMenuItem.Text = "Retorna";
+            this.retornaToolStripMenuItem.Click += new System.EventHandler(this.retornaToolStripMenuItem_Click);
             // 
             // Servico_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 377);
-            this.Controls.Add(this.Btn_Retornar_Menu);
-            this.Controls.Add(this.Btn_Salvar_Servico);
+            this.ClientSize = new System.Drawing.Size(622, 301);
             this.Controls.Add(this.Lbl_Preco_Servico);
             this.Controls.Add(this.Txt_Preco_Servico);
             this.Controls.Add(this.Rtb_Descricao_Servico);
@@ -139,8 +152,12 @@
             this.Controls.Add(this.Lbl_Servico);
             this.Controls.Add(this.Txt_Nome_Servico);
             this.Controls.Add(this.Lbl_Text_Servico);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Servico_Cliente";
-            this.Text = "Servico_Cliente";
+            this.Text = "Cadastro de Serviço";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +172,9 @@
         private RichTextBox Rtb_Descricao_Servico;
         private Label Lbl_Preco_Servico;
         private TextBox Txt_Preco_Servico;
-        private Button Btn_Salvar_Servico;
-        private Button Btn_Retornar_Menu;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem modosToolStripMenuItem;
+        private ToolStripMenuItem salvarToolStripMenuItem;
+        private ToolStripMenuItem retornaToolStripMenuItem;
     }
 }

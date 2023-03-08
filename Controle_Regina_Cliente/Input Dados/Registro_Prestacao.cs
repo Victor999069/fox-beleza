@@ -27,13 +27,6 @@ namespace Controle_Regina_Cliente.Input_Dados
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Menu.Menu viajar = new Menu.Menu();
-            viajar.Show();
-            this.Hide();
-        }
-
         private void Lbl_Input_Desconto_Click(object sender, EventArgs e)
         {
 
@@ -65,7 +58,6 @@ namespace Controle_Regina_Cliente.Input_Dados
         {
 
         }
-
         private void Cbm_Lista_Cliente_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -91,6 +83,13 @@ namespace Controle_Regina_Cliente.Input_Dados
             {
                 MessageBox.Show($"Ocorreu um erro ao tentar carregar os dados na combo box: {ex.Message}");
             }
+        }
+
+        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Menu.Menu viajar = new Menu.Menu();
+            viajar.Show();
+            this.Hide();
         }
     }
 }

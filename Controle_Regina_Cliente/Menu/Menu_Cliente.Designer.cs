@@ -46,7 +46,7 @@
             // 
             this.Lbl_Text_Menu.AutoSize = true;
             this.Lbl_Text_Menu.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Text_Menu.Location = new System.Drawing.Point(186, 56);
+            this.Lbl_Text_Menu.Location = new System.Drawing.Point(124, 126);
             this.Lbl_Text_Menu.Name = "Lbl_Text_Menu";
             this.Lbl_Text_Menu.Size = new System.Drawing.Size(434, 47);
             this.Lbl_Text_Menu.TabIndex = 0;
@@ -99,7 +99,7 @@
             // Stm_Registro_Menu
             // 
             this.Stm_Registro_Menu.Name = "Stm_Registro_Menu";
-            this.Stm_Registro_Menu.Size = new System.Drawing.Size(157, 22);
+            this.Stm_Registro_Menu.Size = new System.Drawing.Size(180, 22);
             this.Stm_Registro_Menu.Text = "Registro Cliente";
             this.Stm_Registro_Menu.Click += new System.EventHandler(this.registroClienteToolStripMenuItem_Click);
             // 
