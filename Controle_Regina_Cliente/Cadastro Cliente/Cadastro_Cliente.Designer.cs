@@ -32,13 +32,16 @@
             this.Txt_Cliente_Cadastro = new System.Windows.Forms.TextBox();
             this.Lbl_Nome_CLiente = new System.Windows.Forms.Label();
             this.Lbl_Tel_Cliente = new System.Windows.Forms.Label();
-            this.Btn_Retornar_Menu = new System.Windows.Forms.Button();
-            this.Btn_Salvar_Cliente = new System.Windows.Forms.Button();
             this.Lbl_Cliente_Bairro = new System.Windows.Forms.Label();
             this.Txt_Cliente_Tel = new System.Windows.Forms.TextBox();
             this.Txt_Cliente_DDD = new System.Windows.Forms.TextBox();
             this.Lbl_Cliente_DDD = new System.Windows.Forms.Label();
             this.Txt_Cliente_Bairro = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.modosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.retornaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_Text_Client
@@ -78,28 +81,6 @@
             this.Lbl_Tel_Cliente.Size = new System.Drawing.Size(121, 29);
             this.Lbl_Tel_Cliente.TabIndex = 5;
             this.Lbl_Tel_Cliente.Text = "Telefone Cliente";
-            // 
-            // Btn_Retornar_Menu
-            // 
-            this.Btn_Retornar_Menu.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Btn_Retornar_Menu.Location = new System.Drawing.Point(28, 268);
-            this.Btn_Retornar_Menu.Name = "Btn_Retornar_Menu";
-            this.Btn_Retornar_Menu.Size = new System.Drawing.Size(91, 39);
-            this.Btn_Retornar_Menu.TabIndex = 6;
-            this.Btn_Retornar_Menu.Text = "Retorna";
-            this.Btn_Retornar_Menu.UseVisualStyleBackColor = true;
-            this.Btn_Retornar_Menu.Click += new System.EventHandler(this.Btn_Retornar_Menu_Click);
-            // 
-            // Btn_Salvar_Cliente
-            // 
-            this.Btn_Salvar_Cliente.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Btn_Salvar_Cliente.Location = new System.Drawing.Point(530, 268);
-            this.Btn_Salvar_Cliente.Name = "Btn_Salvar_Cliente";
-            this.Btn_Salvar_Cliente.Size = new System.Drawing.Size(91, 39);
-            this.Btn_Salvar_Cliente.TabIndex = 7;
-            this.Btn_Salvar_Cliente.Text = "Salvar";
-            this.Btn_Salvar_Cliente.UseVisualStyleBackColor = true;
-            this.Btn_Salvar_Cliente.Click += new System.EventHandler(this.Btn_Salvar_Cliente_Click);
             // 
             // Lbl_Cliente_Bairro
             // 
@@ -144,6 +125,39 @@
             this.Txt_Cliente_Bairro.Size = new System.Drawing.Size(191, 23);
             this.Txt_Cliente_Bairro.TabIndex = 2;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(640, 24);
+            this.menuStrip1.TabIndex = 12;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // modosToolStripMenuItem
+            // 
+            this.modosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salvarToolStripMenuItem,
+            this.retornaToolStripMenuItem});
+            this.modosToolStripMenuItem.Name = "modosToolStripMenuItem";
+            this.modosToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.modosToolStripMenuItem.Text = "Modos";
+            // 
+            // salvarToolStripMenuItem
+            // 
+            this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvarToolStripMenuItem.Text = "Salvar";
+            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
+            // 
+            // retornaToolStripMenuItem
+            // 
+            this.retornaToolStripMenuItem.Name = "retornaToolStripMenuItem";
+            this.retornaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retornaToolStripMenuItem.Text = "Retorna";
+            this.retornaToolStripMenuItem.Click += new System.EventHandler(this.retornaToolStripMenuItem_Click);
+            // 
             // Cadastro_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -154,15 +168,17 @@
             this.Controls.Add(this.Lbl_Cliente_DDD);
             this.Controls.Add(this.Txt_Cliente_Tel);
             this.Controls.Add(this.Lbl_Cliente_Bairro);
-            this.Controls.Add(this.Btn_Salvar_Cliente);
-            this.Controls.Add(this.Btn_Retornar_Menu);
             this.Controls.Add(this.Lbl_Tel_Cliente);
             this.Controls.Add(this.Lbl_Nome_CLiente);
             this.Controls.Add(this.Txt_Cliente_Cadastro);
             this.Controls.Add(this.Lbl_Text_Client);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Cadastro_Cliente";
             this.Text = "Cadastro_Cliente";
             this.Load += new System.EventHandler(this.Cadastro_Cliente_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,12 +190,14 @@
         private TextBox Txt_Cliente_Cadastro;
         private Label Lbl_Nome_CLiente;
         private Label Lbl_Tel_Cliente;
-        private Button Btn_Retornar_Menu;
-        private Button Btn_Salvar_Cliente;
         private Label Lbl_Cliente_Bairro;
         private TextBox Txt_Cliente_Tel;
         private TextBox Txt_Cliente_DDD;
         private Label Lbl_Cliente_DDD;
         private TextBox Txt_Cliente_Bairro;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem modosToolStripMenuItem;
+        private ToolStripMenuItem salvarToolStripMenuItem;
+        private ToolStripMenuItem retornaToolStripMenuItem;
     }
 }

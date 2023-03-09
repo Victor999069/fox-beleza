@@ -94,7 +94,7 @@
             // 
             this.Lbl_Input_Preco.AutoSize = true;
             this.Lbl_Input_Preco.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Preco.Location = new System.Drawing.Point(449, 189);
+            this.Lbl_Input_Preco.Location = new System.Drawing.Point(298, 189);
             this.Lbl_Input_Preco.Name = "Lbl_Input_Preco";
             this.Lbl_Input_Preco.Size = new System.Drawing.Size(50, 29);
             this.Lbl_Input_Preco.TabIndex = 8;
@@ -102,7 +102,7 @@
             // 
             // Txt_Registro_Prc
             // 
-            this.Txt_Registro_Prc.Location = new System.Drawing.Point(500, 189);
+            this.Txt_Registro_Prc.Location = new System.Drawing.Point(349, 189);
             this.Txt_Registro_Prc.Name = "Txt_Registro_Prc";
             this.Txt_Registro_Prc.Size = new System.Drawing.Size(69, 23);
             this.Txt_Registro_Prc.TabIndex = 7;
@@ -112,7 +112,7 @@
             // 
             this.Lbl_Input_Desconto.AutoSize = true;
             this.Lbl_Input_Desconto.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Desconto.Location = new System.Drawing.Point(287, 189);
+            this.Lbl_Input_Desconto.Location = new System.Drawing.Point(427, 189);
             this.Lbl_Input_Desconto.Name = "Lbl_Input_Desconto";
             this.Lbl_Input_Desconto.Size = new System.Drawing.Size(74, 29);
             this.Lbl_Input_Desconto.TabIndex = 10;
@@ -121,7 +121,7 @@
             // 
             // Txt_Registro_Desconto
             // 
-            this.Txt_Registro_Desconto.Location = new System.Drawing.Point(363, 189);
+            this.Txt_Registro_Desconto.Location = new System.Drawing.Point(507, 189);
             this.Txt_Registro_Desconto.Name = "Txt_Registro_Desconto";
             this.Txt_Registro_Desconto.Size = new System.Drawing.Size(75, 23);
             this.Txt_Registro_Desconto.TabIndex = 9;
@@ -196,7 +196,7 @@
             this.modosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(611, 24);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -212,13 +212,14 @@
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.salvarToolStripMenuItem.Text = "Salvar";
+            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
             // 
             // retornarToolStripMenuItem
             // 
             this.retornarToolStripMenuItem.Name = "retornarToolStripMenuItem";
-            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.retornarToolStripMenuItem.Text = "Retornar";
             this.retornarToolStripMenuItem.Click += new System.EventHandler(this.retornarToolStripMenuItem_Click);
             // 
@@ -226,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 306);
+            this.ClientSize = new System.Drawing.Size(611, 306);
             this.Controls.Add(this.Cbm_Lista_Cliente);
             this.Controls.Add(this.Lista_de_Serviço);
             this.Controls.Add(this.Txt_Telefone);

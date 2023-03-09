@@ -23,16 +23,16 @@ namespace Controle_Regina_Cliente.Apresentacao
 
         }
 
-        private void Btn_Apresentacao_Retorna_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void retornaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Menu.Menu viajar = new Menu.Menu();
             viajar.Show();
             this.Close();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -93,8 +93,8 @@
             this.Stm_Registros_Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Stm_Registro_Menu});
             this.Stm_Registros_Menu.Name = "Stm_Registros_Menu";
-            this.Stm_Registros_Menu.Size = new System.Drawing.Size(67, 20);
-            this.Stm_Registros_Menu.Text = "Registros";
+            this.Stm_Registros_Menu.Size = new System.Drawing.Size(135, 20);
+            this.Stm_Registros_Menu.Text = "Registro Atendimento";
             // 
             // Stm_Registro_Menu
             // 

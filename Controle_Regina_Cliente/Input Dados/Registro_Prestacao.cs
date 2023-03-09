@@ -91,5 +91,10 @@ namespace Controle_Regina_Cliente.Input_Dados
             viajar.Show();
             this.Hide();
         }
+
+        private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

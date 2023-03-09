@@ -74,5 +74,4 @@ namespace Controle_Regina_Cliente.Servico
             }
         }
     }
-    }
 }

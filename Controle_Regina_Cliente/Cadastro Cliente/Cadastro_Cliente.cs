@@ -25,13 +25,6 @@ namespace Controle_Regina_Cliente.Cliente
 
         }
 
-        private void Btn_Retornar_Menu_Click(object sender, EventArgs e)
-        {
-            Menu.Menu viajar = new Menu.Menu();
-            viajar.Show();
-            this.Hide();
-        }
-
         private void Cadastro_Cliente_Load(object sender, EventArgs e)
         {
 
@@ -61,7 +54,14 @@ namespace Controle_Regina_Cliente.Cliente
             }
         }
 
-        private void Btn_Salvar_Cliente_Click(object sender, EventArgs e)
+        private void retornaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Menu.Menu viajar = new Menu.Menu();
+            viajar.Show();
+            this.Hide();
+        }
+
+        private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string nome = Txt_Cliente_Cadastro.Text;
             string bairro = Txt_Cliente_Bairro.Text;
@@ -72,7 +72,7 @@ namespace Controle_Regina_Cliente.Cliente
             Conexao_Cliente connection = new Conexao_Cliente();
 
             var cone = connection.CriarConexao();
-            
+
             string comando = "INSERT INTO Dados_Clientes([Nome Cliente], [Bairro Cliente], [DDD Telefone], [Telefone Cliente]) VALUES ('" + nome + "', '" + bairro + "', '" + DDD + "', '" + telefone + "')";
 
             try
@@ -85,14 +85,13 @@ namespace Controle_Regina_Cliente.Cliente
 
                 this.Hide();
 
-                Menu.Menu viaja= new Menu.Menu();
+                Menu.Menu viaja = new Menu.Menu();
                 viaja.Show();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar cliente" + ex.Message);
             }
-            
         }
     }
 }
