@@ -29,7 +29,7 @@ namespace Controle_Regina_Cliente.Servico
         {
 
         }
-
+        //retorna para o menu
         private void retornaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Menu.Menu viajar = new Menu.Menu();
@@ -41,7 +41,7 @@ namespace Controle_Regina_Cliente.Servico
         {
 
         }
-
+        //salva os dados das textbox "Nome Serviço", "Preço Serviço" e "Descrição Serviço" em uma comunicação com o sqlserver local
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string servico = Txt_Nome_Servico.Text;

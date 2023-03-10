@@ -22,12 +22,12 @@ namespace Controle_Regina_Cliente.Apresentacao
         {
 
         }
-
+        //dados a apresentar em tabela
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
+        //inicia o retorno a tela menu
         private void retornaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Menu.Menu viajar = new Menu.Menu();

@@ -29,7 +29,7 @@ namespace Controle_Regina_Cliente.Cliente
         {
 
         }
-
+        //limita dados não numericos a textbox
         private void Txt_Cliente_DDD_TextChanged(object sender, EventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(Txt_Cliente_DDD.Text, "[^0-9]"))
@@ -41,7 +41,7 @@ namespace Controle_Regina_Cliente.Cliente
                 }
             };
         }
-
+        //limita dados não numericos a textbox
         private void Txt_Cliente_Tel_TextChanged(object sender, EventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(Txt_Cliente_Tel.Text, "[^0-9]"))
@@ -53,14 +53,14 @@ namespace Controle_Regina_Cliente.Cliente
                 }
             }
         }
-
+        //envia o usuario para o menu
         private void retornaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Menu.Menu viajar = new Menu.Menu();
             viajar.Show();
             this.Hide();
         }
-
+        //transmite os dados informados nas textbox para o banco de dados local
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string nome = Txt_Cliente_Cadastro.Text;
