@@ -71,13 +71,17 @@ namespace Controle_Regina_Cliente.Input_Dados
                 {
                     DataTable table = new DataTable();
                     adapter.Fill(table);
-                    Cbm_Lista_Cliente.DisplayMember = "[Nome Cliente]";
-                    Cbm_Lista_Cliente.ValueMember = "[Nome Cliente]";
-                    Cbm_Lista_Cliente.DataSource = table;
-                    foreach (DataRow row in table.Rows)
-                    {
-                        Console.WriteLine(row["Nome Cliente"].ToString());
-                    }
+
+                    Cbm_Lista_Cliente.DropDownStyle = ComboBoxStyle.DropDownList;
+                    Cbm_Lista_Cliente.FormattingEnabled = true;
+
+                    DataView dataView = new DataView(table);
+                    string displayMember = "Nome Cliente";
+                    dataView.RowFilter = string.Format("{0} = '{1}'", displayMember, Cbm_Lista_Cliente.Text);
+
+                    Cbm_Lista_Cliente.DisplayMember = displayMember;
+                    Cbm_Lista_Cliente.ValueMember = displayMember;
+                    Cbm_Lista_Cliente.DataSource = dataView;
                 }
             }
             catch (Exception ex)
@@ -85,17 +89,6 @@ namespace Controle_Regina_Cliente.Input_Dados
                 MessageBox.Show($"Ocorreu um erro ao tentar carregar os dados na combo box: {ex.Message}");
             }
         }
-        //retorna ao menu
-        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Menu.Menu viajar = new Menu.Menu();
-            viajar.Show();
-            this.Hide();
-        }
-        //comando para salvar os dados passados na textbox
-        private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
         }
     }
-}
