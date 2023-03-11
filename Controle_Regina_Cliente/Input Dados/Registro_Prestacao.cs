@@ -61,6 +61,28 @@ namespace Controle_Regina_Cliente.Input_Dados
         //retorna lista de cliente
         private void Cbm_Lista_Cliente_SelectedIndexChanged(object sender, EventArgs e)
         {
+            carregarCliente();
+        }
+        //retorna ao menu
+        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Menu.Menu viajar = new Menu.Menu();
+            viajar.Show();
+            this.Hide();
+        }
+        //comando para salvar os dados passados na textbox
+        private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_Input_PrcFinal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void carregarCliente()
+        {
             try
             {
                 Conexao_Cliente conexao = new Conexao_Cliente();
@@ -76,12 +98,14 @@ namespace Controle_Regina_Cliente.Input_Dados
                     Cbm_Lista_Cliente.FormattingEnabled = true;
 
                     DataView dataView = new DataView(table);
-                    string displayMember = "Nome Cliente";
+                    string displayMember = "[Nome Cliente]";
                     dataView.RowFilter = string.Format("{0} = '{1}'", displayMember, Cbm_Lista_Cliente.Text);
 
-                    Cbm_Lista_Cliente.DisplayMember = displayMember;
-                    Cbm_Lista_Cliente.ValueMember = displayMember;
+                    Cbm_Lista_Cliente.DisplayMember = "[Nome Cliente]";
+                    Cbm_Lista_Cliente.ValueMember = "[Nome Cliente]";
                     Cbm_Lista_Cliente.DataSource = dataView;
+
+                    connection.Close();
                 }
             }
             catch (Exception ex)
@@ -90,5 +114,5 @@ namespace Controle_Regina_Cliente.Input_Dados
             }
         }
 
-        }
     }
+}
