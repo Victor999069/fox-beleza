@@ -49,6 +49,10 @@
             this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Lbl_Input_PrcFinal = new System.Windows.Forms.Label();
             this.Txt_Input_PrcFinal = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Cbm_Lista_Servico = new System.Windows.Forms.ComboBox();
+            this.Mtb_Registro_Tel = new System.Windows.Forms.MaskedTextBox();
+            this.Mtb_Registro_Servico = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastroClienteBindingSource)).BeginInit();
@@ -72,7 +76,7 @@
             // 
             this.Lbl_Input_Servico.AutoSize = true;
             this.Lbl_Input_Servico.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Servico.Location = new System.Drawing.Point(280, 126);
+            this.Lbl_Input_Servico.Location = new System.Drawing.Point(291, 126);
             this.Lbl_Input_Servico.Name = "Lbl_Input_Servico";
             this.Lbl_Input_Servico.Size = new System.Drawing.Size(122, 29);
             this.Lbl_Input_Servico.TabIndex = 3;
@@ -92,7 +96,7 @@
             // 
             this.Lbl_Input_Preco.AutoSize = true;
             this.Lbl_Input_Preco.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Preco.Location = new System.Drawing.Point(263, 189);
+            this.Lbl_Input_Preco.Location = new System.Drawing.Point(260, 189);
             this.Lbl_Input_Preco.Name = "Lbl_Input_Preco";
             this.Lbl_Input_Preco.Size = new System.Drawing.Size(50, 29);
             this.Lbl_Input_Preco.TabIndex = 8;
@@ -102,7 +106,7 @@
             // 
             this.Lbl_Input_Desconto.AutoSize = true;
             this.Lbl_Input_Desconto.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Desconto.Location = new System.Drawing.Point(385, 189);
+            this.Lbl_Input_Desconto.Location = new System.Drawing.Point(388, 189);
             this.Lbl_Input_Desconto.Name = "Lbl_Input_Desconto";
             this.Lbl_Input_Desconto.Size = new System.Drawing.Size(74, 29);
             this.Lbl_Input_Desconto.TabIndex = 10;
@@ -115,7 +119,7 @@
             this.Txt_Registro_Desconto.Name = "Txt_Registro_Desconto";
             this.Txt_Registro_Desconto.Size = new System.Drawing.Size(75, 23);
             this.Txt_Registro_Desconto.TabIndex = 9;
-            this.Txt_Registro_Desconto.TextChanged += new System.EventHandler(this.Txt_Input_Desconto_TextChanged);
+            this.Txt_Registro_Desconto.TextChanged += new System.EventHandler(this.Txt_Input_Desconto_LostFocus);
             // 
             // Lbl_Prestacao_Inicial
             // 
@@ -212,11 +216,39 @@
             this.Txt_Input_PrcFinal.TabIndex = 18;
             this.Txt_Input_PrcFinal.TextChanged += new System.EventHandler(this.Txt_Input_PrcFinal_TextChanged);
             // 
+            // Cbm_Lista_Servico
+            // 
+            this.Cbm_Lista_Servico.FormattingEnabled = true;
+            this.Cbm_Lista_Servico.Location = new System.Drawing.Point(433, 126);
+            this.Cbm_Lista_Servico.Name = "Cbm_Lista_Servico";
+            this.Cbm_Lista_Servico.Size = new System.Drawing.Size(187, 23);
+            this.Cbm_Lista_Servico.TabIndex = 20;
+            this.Cbm_Lista_Servico.SelectedIndexChanged += new System.EventHandler(this.Cbm_Lista_Servico_SelectedIndexChanged);
+            // 
+            // Mtb_Registro_Tel
+            // 
+            this.Mtb_Registro_Tel.Location = new System.Drawing.Point(121, 189);
+            this.Mtb_Registro_Tel.Mask = "(00) - 00000 - 0000";
+            this.Mtb_Registro_Tel.Name = "Mtb_Registro_Tel";
+            this.Mtb_Registro_Tel.Size = new System.Drawing.Size(138, 23);
+            this.Mtb_Registro_Tel.TabIndex = 21;
+            // 
+            // Mtb_Registro_Servico
+            // 
+            this.Mtb_Registro_Servico.Location = new System.Drawing.Point(311, 190);
+            this.Mtb_Registro_Servico.Name = "Mtb_Registro_Servico";
+            this.Mtb_Registro_Servico.Size = new System.Drawing.Size(75, 23);
+            this.Mtb_Registro_Servico.TabIndex = 22;
+            this.Mtb_Registro_Servico.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Mtb_Registro_Servico_MaskInputRejected);
+            // 
             // Registro_Prestacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 306);
+            this.Controls.Add(this.Mtb_Registro_Servico);
+            this.Controls.Add(this.Mtb_Registro_Tel);
+            this.Controls.Add(this.Cbm_Lista_Servico);
             this.Controls.Add(this.Lbl_Input_PrcFinal);
             this.Controls.Add(this.Txt_Input_PrcFinal);
             this.Controls.Add(this.Cbm_Lista_Cliente);
@@ -228,9 +260,11 @@
             this.Controls.Add(this.Lbl_Input_Servico);
             this.Controls.Add(this.Lbl_Input_Cliente);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Registro_Prestacao";
             this.Text = "Input_Dados";
+            this.Load += new System.EventHandler(this.Registro_Prestacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastroClienteBindingSource)).EndInit();
@@ -266,5 +300,9 @@
         private ToolStripMenuItem retornarToolStripMenuItem;
         private Label Lbl_Input_PrcFinal;
         private TextBox Txt_Input_PrcFinal;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private ComboBox Cbm_Lista_Servico;
+        private MaskedTextBox Mtb_Registro_Tel;
+        private MaskedTextBox Mtb_Registro_Servico;
     }
 }

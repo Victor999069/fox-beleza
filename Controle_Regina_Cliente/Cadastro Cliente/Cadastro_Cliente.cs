@@ -29,30 +29,8 @@ namespace Controle_Regina_Cliente.Cliente
         {
 
         }
-        //limita dados não numericos a textbox
-        private void Txt_Cliente_DDD_TextChanged(object sender, EventArgs e)
-        {
-            if (System.Text.RegularExpressions.Regex.IsMatch(Txt_Cliente_DDD.Text, "[^0-9]"))
-            {
-                MessageBox.Show("Digite somente o DDD");
-                if (Txt_Cliente_DDD.Text.Length > 0)
-                {
-                    Txt_Cliente_DDD.Text = Txt_Cliente_DDD.Text.Remove(Txt_Cliente_DDD.Text.Length - 1);
-                }
-            };
-        }
-        //limita dados não numericos a textbox
-        private void Txt_Cliente_Tel_TextChanged(object sender, EventArgs e)
-        {
-            if (System.Text.RegularExpressions.Regex.IsMatch(Txt_Cliente_Tel.Text, "[^0-9]"))
-            {
-                MessageBox.Show("Digite somente telefone");
-                if (Txt_Cliente_Tel.Text.Length > 0)
-                {
-                    Txt_Cliente_Tel.Text = Txt_Cliente_Tel.Text.Remove(Txt_Cliente_Tel.Text.Length- 1);
-                }
-            }
-        }
+
+
         //envia o usuario para o menu
         private void retornaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -65,15 +43,37 @@ namespace Controle_Regina_Cliente.Cliente
         {
             string nome = Txt_Cliente_Cadastro.Text;
             string bairro = Txt_Cliente_Bairro.Text;
-            string DDD = Txt_Cliente_DDD.Text;
-            string telefone = Txt_Cliente_Tel.Text;
+            string telefone = Mtb_Cliente_Tel.Text;
+            string nascimento = Dtp_Cliente_Nascimento.Text;
+
+            string alergia = "";
+            if (Rbn_Cliente_Urticaria.Checked)
+            {
+                alergia = "Urticaria";
+            }
+            else if (Rbn_Cliente_Dermatite.Checked)
+            {
+                alergia = "Dermatite de Contato";
+            }
+            else if (Rbn_Cliente_Atopica.Checked)
+            {
+                alergia = "Dermatite Atópica";
+            }
+            else if (Rbn_Cliente_Exantema.Checked)
+            {
+                alergia = "Exantema";
+            }
+            else if (Rbn_Cliente_Nenhuma.Checked)
+            {
+                alergia = "Nenhuma";
+            }
 
 
             Conexao_Cliente connection = new Conexao_Cliente();
 
             var cone = connection.CriarConexao();
 
-            string comando = "INSERT INTO Dados_Clientes([Nome Cliente], [Bairro Cliente], [DDD Telefone], [Telefone Cliente]) VALUES ('" + nome + "', '" + bairro + "', '" + DDD + "', '" + telefone + "')";
+            string comando = "INSERT INTO Dados_Clientes([Nome Cliente], [Bairro Cliente], [Telefone Cliente], [Data de Nascimento], Alergia) VALUES ('" + nome + "', '" + bairro + "', '" + telefone + "', '" + nascimento + "', '" + alergia + "')";
 
             try
             {
@@ -92,6 +92,40 @@ namespace Controle_Regina_Cliente.Cliente
             {
                 MessageBox.Show("Erro ao cadastrar cliente" + ex.Message);
             }
+        }
+        
+        private void Mtb_Cliente_Tel_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void Dtp_Cliente_Nascimento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void Rbn_Cliente_Exantema_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rbn_Cliente_Urticaria_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rbn_Cliente_Dermatite_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rbn_Cliente_Atopica_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rbn_Cliente_Nenhuma_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
