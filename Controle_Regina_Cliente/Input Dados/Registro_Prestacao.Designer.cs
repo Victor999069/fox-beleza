@@ -33,12 +33,9 @@
             this.Lbl_Input_Servico = new System.Windows.Forms.Label();
             this.Lbl_Input_Tel = new System.Windows.Forms.Label();
             this.Lbl_Input_Preco = new System.Windows.Forms.Label();
-            this.Txt_Registro_Prc = new System.Windows.Forms.TextBox();
             this.Lbl_Input_Desconto = new System.Windows.Forms.Label();
             this.Txt_Registro_Desconto = new System.Windows.Forms.TextBox();
             this.Lbl_Prestacao_Inicial = new System.Windows.Forms.Label();
-            this.Txt_Telefone = new System.Windows.Forms.TextBox();
-            this.Lista_de_Serviço = new System.Windows.Forms.ListBox();
             this.conexaoClienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.conexaoClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Cbm_Lista_Cliente = new System.Windows.Forms.ComboBox();
@@ -70,7 +67,6 @@
             this.Lbl_Input_Cliente.Size = new System.Drawing.Size(103, 29);
             this.Lbl_Input_Cliente.TabIndex = 1;
             this.Lbl_Input_Cliente.Text = "Nome Cliente";
-            this.Lbl_Input_Cliente.Click += new System.EventHandler(this.label1_Click);
             // 
             // Lbl_Input_Servico
             // 
@@ -102,14 +98,6 @@
             this.Lbl_Input_Preco.TabIndex = 8;
             this.Lbl_Input_Preco.Text = "Preço";
             // 
-            // Txt_Registro_Prc
-            // 
-            this.Txt_Registro_Prc.Location = new System.Drawing.Point(314, 189);
-            this.Txt_Registro_Prc.Name = "Txt_Registro_Prc";
-            this.Txt_Registro_Prc.Size = new System.Drawing.Size(69, 23);
-            this.Txt_Registro_Prc.TabIndex = 7;
-            this.Txt_Registro_Prc.TextChanged += new System.EventHandler(this.Txt_Registro_Prc_TextChanged);
-            // 
             // Lbl_Input_Desconto
             // 
             this.Lbl_Input_Desconto.AutoSize = true;
@@ -139,25 +127,6 @@
             this.Lbl_Prestacao_Inicial.TabIndex = 12;
             this.Lbl_Prestacao_Inicial.Text = "Informe os dados do seu atendimento";
             // 
-            // Txt_Telefone
-            // 
-            this.Txt_Telefone.Location = new System.Drawing.Point(121, 190);
-            this.Txt_Telefone.Name = "Txt_Telefone";
-            this.Txt_Telefone.Size = new System.Drawing.Size(138, 23);
-            this.Txt_Telefone.TabIndex = 14;
-            this.Txt_Telefone.TextChanged += new System.EventHandler(this.Txt_Telefone_TextChanged);
-            // 
-            // Lista_de_Serviço
-            // 
-            this.Lista_de_Serviço.DataSource = this.conexaoClienteBindingSource1;
-            this.Lista_de_Serviço.FormattingEnabled = true;
-            this.Lista_de_Serviço.ItemHeight = 15;
-            this.Lista_de_Serviço.Location = new System.Drawing.Point(423, 126);
-            this.Lista_de_Serviço.Name = "Lista_de_Serviço";
-            this.Lista_de_Serviço.Size = new System.Drawing.Size(160, 19);
-            this.Lista_de_Serviço.TabIndex = 15;
-            this.Lista_de_Serviço.SelectedIndexChanged += new System.EventHandler(this.Lista_de_Serviço_SelectedIndexChanged);
-            // 
             // conexaoClienteBindingSource1
             // 
             this.conexaoClienteBindingSource1.DataSource = typeof(Controle_Regina_Cliente.Conexao_BD.Conexao_Cliente);
@@ -168,7 +137,6 @@
             // 
             // Cbm_Lista_Cliente
             // 
-            this.Cbm_Lista_Cliente.DataSource = this.cadastroClienteBindingSource;
             this.Cbm_Lista_Cliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbm_Lista_Cliente.FormattingEnabled = true;
             this.Cbm_Lista_Cliente.Location = new System.Drawing.Point(121, 126);
@@ -252,13 +220,10 @@
             this.Controls.Add(this.Lbl_Input_PrcFinal);
             this.Controls.Add(this.Txt_Input_PrcFinal);
             this.Controls.Add(this.Cbm_Lista_Cliente);
-            this.Controls.Add(this.Lista_de_Serviço);
-            this.Controls.Add(this.Txt_Telefone);
             this.Controls.Add(this.Lbl_Prestacao_Inicial);
             this.Controls.Add(this.Lbl_Input_Desconto);
             this.Controls.Add(this.Txt_Registro_Desconto);
             this.Controls.Add(this.Lbl_Input_Preco);
-            this.Controls.Add(this.Txt_Registro_Prc);
             this.Controls.Add(this.Lbl_Input_Tel);
             this.Controls.Add(this.Lbl_Input_Servico);
             this.Controls.Add(this.Lbl_Input_Cliente);
@@ -284,12 +249,9 @@
         private Label Lbl_Input_Servico;
         private Label Lbl_Input_Tel;
         private Label Lbl_Input_Preco;
-        private TextBox Txt_Registro_Prc;
         private Label Lbl_Input_Desconto;
         private TextBox Txt_Registro_Desconto;
         private Label Lbl_Prestacao_Inicial;
-        private TextBox Txt_Telefone;
-        private ListBox Lista_de_Serviço;
         private BindingSource conexaoClienteBindingSource1;
         private BindingSource conexaoClienteBindingSource;
         private ComboBox Cbm_Lista_Cliente;

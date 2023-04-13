@@ -22,11 +22,6 @@ namespace Controle_Regina_Cliente.Input_Dados
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Lbl_Input_Desconto_Click(object sender, EventArgs e)
         {
 
@@ -43,16 +38,8 @@ namespace Controle_Regina_Cliente.Input_Dados
                 }
             }
         }
-        //comando para retorno dos dados telefonicos apos o cliente ser escolhido
-        private void Txt_Telefone_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-        //comando para retorno dos dados de preço serviço apos o serviço ser escolhido
-        private void Txt_Registro_Prc_TextChanged(object sender, EventArgs e)
-        {
 
-        }
         //retorna lista de serviço
         private void Lista_de_Serviço_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -112,6 +99,74 @@ namespace Controle_Regina_Cliente.Input_Dados
             {
                 MessageBox.Show($"Ocorreu um erro ao tentar carregar os dados na combo box: {ex.Message}");
             }
+        }
+
+        private void Cbm_Lista_Servico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //verificar se o indice é maior que zero (selecione)
+            //calcular preço de acordo com o serviço
+
+            var index = Cbm_Lista_Cliente.SelectedIndex;
+
+            if (index > 0)
+            {
+                var nomeServico = Cbm_Lista_Cliente.Text;
+                var precoServico = CarregarPreco(nomeServico);
+                Txt_Registro_Prc.Text = precoServico.ToString("C");
+
+            }
+        }
+
+        private string CarregaTelCliente(string nomeCliente)
+        {
+            try
+            {
+                Conexao_Cliente conexao = new Conexao_Cliente();
+                SqlConnection connection = conexao.CriarConexao();
+
+                string sql = $"SELECT [Telefone Cliente] FROM Dados_Clientes WHERE [Nome Cliente] = '{nomeCliente}'";
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    string telefoneCliente = Convert.ToString(command.ExecuteScalar());
+
+                    connection.Close();
+
+                    return telefoneCliente;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro ao tentar carregar o telefone do cliente: {ex.Message}");
+                return string.Empty;
+            }
+        }
+
+        private decimal CarregarPreco(string nomeServico)
+        {
+            try
+            {
+                Conexao_Cliente conexao = new Conexao_Cliente();
+                using (SqlConnection connection = conexao.CriarConexao())
+                {
+                    string sql = $"SELECT [PRECO] FROM [DADOS_SERVICO] WHERE [NOME_SERVICO] = '{nomeServico}'";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            decimal preco = (decimal)result;
+                            return preco;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro ao tentar obter o preço do serviço: {ex.Message}");
         }
 
     }
