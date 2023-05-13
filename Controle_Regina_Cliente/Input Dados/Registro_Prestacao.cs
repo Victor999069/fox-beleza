@@ -256,7 +256,6 @@ namespace Controle_Regina_Cliente.Input_Dados
 
         private void Txt_Input_PrcFinal_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Txt_Input_PrcFinal_TextChanged chamado");
             CalculoPrc();
         }
 
