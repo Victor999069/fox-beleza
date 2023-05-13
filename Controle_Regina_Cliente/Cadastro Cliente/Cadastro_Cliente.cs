@@ -34,13 +34,14 @@ namespace Controle_Regina_Cliente.Cliente
         //envia o usuario para o menu
         private void retornaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Close();
             Menu.Menu viajar = new Menu.Menu();
             viajar.Show();
-            this.Hide();
         }
-        //transmite os dados informados nas textbox para o banco de dados local
+        //transmite os dados repassados na tela de cadastro cliente para o banco local.
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // strings de relacionamento de conexao com o banco de dados
             string nome = Txt_Cliente_Cadastro.Text;
             string bairro = Txt_Cliente_Bairro.Text;
             string telefone = Mtb_Cliente_Tel.Text;
@@ -68,7 +69,7 @@ namespace Controle_Regina_Cliente.Cliente
                 alergia = "Nenhuma";
             }
 
-
+            // string de conexao com o banco com retorno de erro caso a conexao quebre
             Conexao_Cliente connection = new Conexao_Cliente();
 
             var cone = connection.CriarConexao();

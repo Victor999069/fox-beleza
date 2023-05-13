@@ -34,8 +34,8 @@ namespace Controle_Regina_Cliente.Input_Dados
             {
                 MessageBox.Show("Informe o Desconto Dado");
                 if (Txt_Registro_Desconto.Text.Length> 0)
-                {
-                    Txt_Registro_Desconto.Text = Txt_Registro_Desconto.Text.Remove(Txt_Registro_Desconto.Text.Length-1);
+                {   
+                    Txt_Registro_Desconto.Text = Txt_Registro_Desconto.Text.Remove(Txt_Registro_Desconto.Text.Length-0);
                 }
             }
             CalculoPrc();
@@ -65,10 +65,21 @@ namespace Controle_Regina_Cliente.Input_Dados
         //retorna ao menu
         private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //this.Close();
+            //Thread retorno = Thread(() => Application.Run(new Menu_Cliente()));
+            //retorno.Start();
+            
+            this.Close();
             Menu.Menu viajar = new Menu.Menu();
             viajar.Show();
-            this.Hide();
+            
         }
+
+        private Thread Thread(Action value)
+        {
+            throw new NotImplementedException();
+        }
+
         //comando para salvar os dados passados na textbox
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -122,7 +133,7 @@ namespace Controle_Regina_Cliente.Input_Dados
                     Cbm_Lista_Cliente.FormattingEnabled = true;
 
                     DataView dataView = new DataView(table);
-                    string displayMember = "[Nome Cliente]";
+                    string displayClient = "[Nome Cliente]";
 
                     Cbm_Lista_Cliente.DisplayMember = "Nome Cliente";
                     Cbm_Lista_Cliente.ValueMember = "Id Cliente";
@@ -161,7 +172,7 @@ namespace Controle_Regina_Cliente.Input_Dados
                     Cbm_Lista_Servico.FormattingEnabled = true;
 
                     DataView dataView = new DataView();
-                    string displayMember = "[Nome Servico]";
+                    string displayClient = "[Nome Servico]";
 
                     Cbm_Lista_Servico.DisplayMember = "Nome Servico";
                     Cbm_Lista_Servico.ValueMember = "Id Servico";
@@ -264,7 +275,7 @@ namespace Controle_Regina_Cliente.Input_Dados
             if (!double.TryParse(Txt_Registro_Desconto.Text, NumberStyles.Currency, CultureInfo.CurrentCulture, out double desconto) ||
                 !double.TryParse(Mtb_Registro_Servico.Text, NumberStyles.Currency, CultureInfo.CurrentCulture, out double preco))
             {
-                MessageBox.Show("Valor inválido");
+                MessageBox.Show("Desconto Aplicando", "Desconto");
                 return;
             }
 

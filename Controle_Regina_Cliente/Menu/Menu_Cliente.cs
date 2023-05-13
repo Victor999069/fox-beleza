@@ -28,16 +28,17 @@ namespace Controle_Regina_Cliente.Menu
         //envia o usuario para a tela de cadastro de cliente
         private void Stm_CadastroCliente_Menu_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Cadastro_Cliente viajar = new Cadastro_Cliente();
             viajar.Show();
-            this.Hide();
+            
         }
         //envia o usuario para a tela de cadastro de serviço
         private void Stm_CadastroServico_Menu_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Servico_Cliente viajar = new Servico_Cliente();
             viajar.Show();
-            this.Hide();
         }
         //envia o usuario para a tela de serviço prestado
         private void registroClienteToolStripMenuItem_Click(object sender, EventArgs e)

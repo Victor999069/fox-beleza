@@ -53,6 +53,7 @@
             this.Cbm_Lista_Servico = new System.Windows.Forms.ComboBox();
             this.Mtb_Registro_Tel = new System.Windows.Forms.MaskedTextBox();
             this.Mtb_Registro_Servico = new System.Windows.Forms.MaskedTextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastroClienteBindingSource)).BeginInit();
@@ -65,57 +66,62 @@
             // Lbl_Input_Cliente
             // 
             this.Lbl_Input_Cliente.AutoSize = true;
+            this.Lbl_Input_Cliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Lbl_Input_Cliente.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Cliente.Location = new System.Drawing.Point(3, 126);
+            this.Lbl_Input_Cliente.Location = new System.Drawing.Point(38, 106);
             this.Lbl_Input_Cliente.Name = "Lbl_Input_Cliente";
-            this.Lbl_Input_Cliente.Size = new System.Drawing.Size(103, 29);
+            this.Lbl_Input_Cliente.Size = new System.Drawing.Size(105, 31);
             this.Lbl_Input_Cliente.TabIndex = 1;
             this.Lbl_Input_Cliente.Text = "Nome Cliente";
             // 
             // Lbl_Input_Servico
             // 
             this.Lbl_Input_Servico.AutoSize = true;
+            this.Lbl_Input_Servico.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Lbl_Input_Servico.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Servico.Location = new System.Drawing.Point(291, 126);
+            this.Lbl_Input_Servico.Location = new System.Drawing.Point(38, 169);
             this.Lbl_Input_Servico.Name = "Lbl_Input_Servico";
-            this.Lbl_Input_Servico.Size = new System.Drawing.Size(122, 29);
+            this.Lbl_Input_Servico.Size = new System.Drawing.Size(124, 31);
             this.Lbl_Input_Servico.TabIndex = 3;
             this.Lbl_Input_Servico.Text = "Serviço Prestado";
             // 
             // Lbl_Input_Tel
             // 
             this.Lbl_Input_Tel.AutoSize = true;
+            this.Lbl_Input_Tel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Lbl_Input_Tel.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Tel.Location = new System.Drawing.Point(2, 189);
+            this.Lbl_Input_Tel.Location = new System.Drawing.Point(301, 106);
             this.Lbl_Input_Tel.Name = "Lbl_Input_Tel";
-            this.Lbl_Input_Tel.Size = new System.Drawing.Size(121, 29);
+            this.Lbl_Input_Tel.Size = new System.Drawing.Size(123, 31);
             this.Lbl_Input_Tel.TabIndex = 6;
             this.Lbl_Input_Tel.Text = "Telefone Cliente";
             // 
             // Lbl_Input_Preco
             // 
             this.Lbl_Input_Preco.AutoSize = true;
+            this.Lbl_Input_Preco.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Lbl_Input_Preco.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Preco.Location = new System.Drawing.Point(260, 189);
+            this.Lbl_Input_Preco.Location = new System.Drawing.Point(369, 169);
             this.Lbl_Input_Preco.Name = "Lbl_Input_Preco";
-            this.Lbl_Input_Preco.Size = new System.Drawing.Size(50, 29);
+            this.Lbl_Input_Preco.Size = new System.Drawing.Size(52, 31);
             this.Lbl_Input_Preco.TabIndex = 8;
             this.Lbl_Input_Preco.Text = "Preço";
             // 
             // Lbl_Input_Desconto
             // 
             this.Lbl_Input_Desconto.AutoSize = true;
+            this.Lbl_Input_Desconto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Lbl_Input_Desconto.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_Desconto.Location = new System.Drawing.Point(388, 189);
+            this.Lbl_Input_Desconto.Location = new System.Drawing.Point(38, 229);
             this.Lbl_Input_Desconto.Name = "Lbl_Input_Desconto";
-            this.Lbl_Input_Desconto.Size = new System.Drawing.Size(74, 29);
+            this.Lbl_Input_Desconto.Size = new System.Drawing.Size(76, 31);
             this.Lbl_Input_Desconto.TabIndex = 10;
             this.Lbl_Input_Desconto.Text = "Desconto";
             this.Lbl_Input_Desconto.Click += new System.EventHandler(this.Lbl_Input_Desconto_Click);
             // 
             // Txt_Registro_Desconto
             // 
-            this.Txt_Registro_Desconto.Location = new System.Drawing.Point(465, 189);
+            this.Txt_Registro_Desconto.Location = new System.Drawing.Point(116, 232);
             this.Txt_Registro_Desconto.Name = "Txt_Registro_Desconto";
             this.Txt_Registro_Desconto.Size = new System.Drawing.Size(75, 23);
             this.Txt_Registro_Desconto.TabIndex = 9;
@@ -125,7 +131,7 @@
             // 
             this.Lbl_Prestacao_Inicial.AutoSize = true;
             this.Lbl_Prestacao_Inicial.Font = new System.Drawing.Font("Javanese Text", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Prestacao_Inicial.Location = new System.Drawing.Point(123, 13);
+            this.Lbl_Prestacao_Inicial.Location = new System.Drawing.Point(134, 28);
             this.Lbl_Prestacao_Inicial.Name = "Lbl_Prestacao_Inicial";
             this.Lbl_Prestacao_Inicial.Size = new System.Drawing.Size(365, 43);
             this.Lbl_Prestacao_Inicial.TabIndex = 12;
@@ -141,9 +147,8 @@
             // 
             // Cbm_Lista_Cliente
             // 
-            this.Cbm_Lista_Cliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbm_Lista_Cliente.FormattingEnabled = true;
-            this.Cbm_Lista_Cliente.Location = new System.Drawing.Point(121, 126);
+            this.Cbm_Lista_Cliente.Location = new System.Drawing.Point(146, 109);
             this.Cbm_Lista_Cliente.Name = "Cbm_Lista_Cliente";
             this.Cbm_Lista_Cliente.Size = new System.Drawing.Size(138, 23);
             this.Cbm_Lista_Cliente.TabIndex = 16;
@@ -171,7 +176,7 @@
             this.modosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(729, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(657, 24);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -201,16 +206,17 @@
             // Lbl_Input_PrcFinal
             // 
             this.Lbl_Input_PrcFinal.AutoSize = true;
+            this.Lbl_Input_PrcFinal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Lbl_Input_PrcFinal.Font = new System.Drawing.Font("Javanese Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Input_PrcFinal.Location = new System.Drawing.Point(545, 189);
+            this.Lbl_Input_PrcFinal.Location = new System.Drawing.Point(206, 229);
             this.Lbl_Input_PrcFinal.Name = "Lbl_Input_PrcFinal";
-            this.Lbl_Input_PrcFinal.Size = new System.Drawing.Size(88, 29);
+            this.Lbl_Input_PrcFinal.Size = new System.Drawing.Size(90, 31);
             this.Lbl_Input_PrcFinal.TabIndex = 19;
             this.Lbl_Input_PrcFinal.Text = "Preço Final";
             // 
             // Txt_Input_PrcFinal
             // 
-            this.Txt_Input_PrcFinal.Location = new System.Drawing.Point(640, 189);
+            this.Txt_Input_PrcFinal.Location = new System.Drawing.Point(298, 232);
             this.Txt_Input_PrcFinal.Name = "Txt_Input_PrcFinal";
             this.Txt_Input_PrcFinal.Size = new System.Drawing.Size(75, 23);
             this.Txt_Input_PrcFinal.TabIndex = 18;
@@ -219,7 +225,7 @@
             // Cbm_Lista_Servico
             // 
             this.Cbm_Lista_Servico.FormattingEnabled = true;
-            this.Cbm_Lista_Servico.Location = new System.Drawing.Point(433, 126);
+            this.Cbm_Lista_Servico.Location = new System.Drawing.Point(165, 172);
             this.Cbm_Lista_Servico.Name = "Cbm_Lista_Servico";
             this.Cbm_Lista_Servico.Size = new System.Drawing.Size(187, 23);
             this.Cbm_Lista_Servico.TabIndex = 20;
@@ -227,7 +233,7 @@
             // 
             // Mtb_Registro_Tel
             // 
-            this.Mtb_Registro_Tel.Location = new System.Drawing.Point(121, 189);
+            this.Mtb_Registro_Tel.Location = new System.Drawing.Point(427, 109);
             this.Mtb_Registro_Tel.Mask = "(00) - 00000 - 0000";
             this.Mtb_Registro_Tel.Name = "Mtb_Registro_Tel";
             this.Mtb_Registro_Tel.Size = new System.Drawing.Size(138, 23);
@@ -235,17 +241,25 @@
             // 
             // Mtb_Registro_Servico
             // 
-            this.Mtb_Registro_Servico.Location = new System.Drawing.Point(311, 190);
+            this.Mtb_Registro_Servico.Location = new System.Drawing.Point(424, 172);
             this.Mtb_Registro_Servico.Name = "Mtb_Registro_Servico";
             this.Mtb_Registro_Servico.Size = new System.Drawing.Size(75, 23);
             this.Mtb_Registro_Servico.TabIndex = 22;
             this.Mtb_Registro_Servico.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Mtb_Registro_Servico_MaskInputRejected);
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(22, 73);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(623, 221);
+            this.listView1.TabIndex = 23;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Registro_Prestacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 306);
+            this.ClientSize = new System.Drawing.Size(657, 306);
             this.Controls.Add(this.Mtb_Registro_Servico);
             this.Controls.Add(this.Mtb_Registro_Tel);
             this.Controls.Add(this.Cbm_Lista_Servico);
@@ -260,10 +274,11 @@
             this.Controls.Add(this.Lbl_Input_Servico);
             this.Controls.Add(this.Lbl_Input_Cliente);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Registro_Prestacao";
-            this.Text = "Input_Dados";
+            this.Text = "Registro de Atendimentos";
             this.Load += new System.EventHandler(this.Registro_Prestacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conexaoClienteBindingSource)).EndInit();
@@ -304,5 +319,6 @@
         private ComboBox Cbm_Lista_Servico;
         private MaskedTextBox Mtb_Registro_Tel;
         private MaskedTextBox Mtb_Registro_Servico;
+        private ListView listView1;
     }
 }
